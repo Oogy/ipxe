@@ -1,0 +1,6 @@
+#!ipxe
+echo 3LA Boot
+dhcp
+echo DHCP Success
+
+chain --autofree --replace http://${net0/next-server}/boot/main.ipxe
